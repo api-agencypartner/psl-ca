@@ -781,7 +781,7 @@ gsap.registerPlugin(ScrollTrigger);
 void L.map(l=>`<a href="${l.site||'#leagues'}" ${l.site?'target="_blank" rel="noopener"':''} title="${l.name}"><img src="${S(l.id)}" alt="${l.ab}"></a>`).join('');
 document.getElementById('msh').innerHTML=L.map(l=>`<img src="${S(l.id)}" alt="${l.ab}">`).join('');
 document.getElementById('ftl').innerHTML=L.map(l=>`<a href="${l.site||'#leagues'}" ${l.site?'target="_blank" rel="noopener"':''}><img src="${S(l.id)}" alt="">${l.ab}</a>`).join('');
-document.getElementById('hidx').insertAdjacentHTML('beforeend',L.map((l,i)=>`<a href="#leagues" data-i="${i}" style="--a:${l.a}"><img src="${S(l.id)}" alt=""><span><b>${l.ab}</b><small>${l.reg}</small></span><i>→</i></a>`).join(''));
+document.getElementById('hidx').insertAdjacentHTML('beforeend',L.map((l,i)=>l.site?`<a href="${l.site}" target="_blank" rel="noopener" aria-label="${l.name} website (opens in a new tab)" data-cur="Visit" style="--a:${l.a}"><img src="${S(l.id)}" alt=""><span><b>${l.ab}</b><small>${l.reg}</small></span><i>↗</i></a>`:`<a href="#leagues" data-i="${i}" style="--a:${l.a}"><img src="${S(l.id)}" alt=""><span><b>${l.ab}</b><small>${l.reg}</small></span><i>→</i></a>`).join(''));
 const acc=document.getElementById('acc');
 acc.innerHTML=L.map((l,i)=>`<article class="pn${i===0?' on':''}" role="tab" tabindex="0" aria-selected="${i===0}" style="--a:${l.a};--b:${l.b}" data-i="${i}">
   ${l.img?`<div class="ph"><img src="img/${l.img}.jpg" alt=""></div>`:`<img class="pat" src="${l.id==='plq'?'img/plq-shield-white.png':'img/ppl-shield-white.png'}" alt="">`}
