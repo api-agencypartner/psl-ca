@@ -167,19 +167,19 @@ html.has-cur,html.has-cur *{cursor:none!important}
 
 /* map scene */
 .mapx{position:relative;height:100svh;background:radial-gradient(60% 70% at 55% 55%,#18214A 0%,var(--ink) 75%);overflow:hidden}
-.mx-in{position:relative;height:100%;display:grid;grid-template-columns:minmax(260px,.55fr) 1.45fr;align-items:center;padding:90px var(--pad) 40px;gap:2vw}
+.mx-in{position:relative;height:100%;display:grid;grid-template-columns:minmax(260px,.55fr) 1.45fr;align-items:center;padding:120px var(--pad) 120px;gap:2vw}
 .mx-copy{position:relative;height:300px}
 .mx-step{position:absolute;inset:0;opacity:0}
 .mx-step:first-child{opacity:1}
 .mx-step .n{font-family:var(--disp);font-weight:800;font-size:16px;color:var(--red2);letter-spacing:.1em}
 .mx-step h2{font-size:clamp(54px,6.4vw,120px);margin:14px 0 18px}
 .mx-step p{color:#B9BDCE;font-size:18px;line-height:1.55;max-width:400px}
-.mx-map{position:relative;width:100%;max-width:1100px;aspect-ratio:1000/620;justify-self:center}
+.mx-map{position:relative;width:100%;max-width:min(1100px,calc((100svh - 300px) * 1.613));aspect-ratio:1000/620;justify-self:center}
 .mx-map svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .mx-map circle{fill:#3A4473}
 .mx-pin{position:absolute;width:7.6%;transform:translate(-50%,-100%);z-index:3}
 .mx-pin img{width:100%;height:auto;filter:drop-shadow(0 14px 22px rgba(0,0,0,.55))}
-.mx-pin .lb{position:absolute;left:50%;top:104%;transform:translateX(-50%);white-space:nowrap;text-align:center;font-family:var(--cond);font-weight:700;letter-spacing:.12em;font-size:clamp(9px,.85vw,13px);text-transform:uppercase}
+.mx-pin .lb{position:absolute;left:50%;top:calc(104% + 14px);transform:translateX(-50%);white-space:nowrap;text-align:center;font-family:var(--cond);font-weight:700;letter-spacing:.12em;font-size:clamp(9px,.85vw,13px);text-transform:uppercase}
 .mx-pin .lb small{display:block;font-weight:600;color:#B9BDCE;letter-spacing:.1em}
 .mx-pin::after{content:"";position:absolute;left:50%;bottom:-10px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--a);box-shadow:0 0 0 6px color-mix(in srgb,var(--a) 30%,transparent)}
 .mx-psl{position:absolute;width:21%;transform:translate(-50%,-50%);z-index:4}
