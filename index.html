@@ -990,7 +990,7 @@ const sbTabs=$('#sbxtabs');sbTabs.insertAdjacentHTML('beforeend','<button role="
 const vp=$('#sbxvp');
 function card(m,i){const done=m.st==='ft',hl=done&&m.hs<m.as,al=done&&m.as<m.hs,ko=m.st==='ko';
  return `<div class="sbx-c" data-i="${i}"><div class="sbx-st"><span>${dv(m.d)}</span><b class="${m.st==='live'?'lv':''}" data-st="${i}">${stL(m)}</b></div>${cr(m.h)}<span class="sbx-t ${hl?'ls':''}">${m.h}</span><span class="sbx-s ${hl?'ls':''}" data-h="${i}">${ko?'':m.hs}</span>${cr(m.a)}<span class="sbx-t ${al?'ls':''}">${m.a}</span><span class="sbx-s ${al?'ls':''}" data-a="${i}">${ko?'':m.as}</span>${m.st==='live'?`<span class="sbx-pr"><i data-p="${i}" style="transform:scaleX(${m.min/90})"></i></span>`:''}</div>`}
-function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=`<span class="sbx-gp">${l.ab}</span>`+ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
+function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
 function arrows(){$('#sbxl').disabled=vp.scrollLeft<4;$('#sbxr').disabled=vp.scrollLeft+vp.clientWidth>=vp.scrollWidth-4}
 vp.addEventListener('scroll',arrows,{passive:true});addEventListener('resize',arrows);
 $('#sbxl').onclick=()=>vp.scrollBy({left:-vp.clientWidth*.8});$('#sbxr').onclick=()=>vp.scrollBy({left:vp.clientWidth*.8});
