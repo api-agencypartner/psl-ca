@@ -535,7 +535,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
     <button class="sbx-ar" id="sbxl" aria-label="Previous matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button>
     <div class="sbx-vp" id="sbxvp"></div>
     <button class="sbx-ar" id="sbxr" aria-label="Next matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button>
-    <div class="sbx-all"><span class="demo" title="Sample fixtures until the PSLC Matchday feed is connected">Preview data</span><a href="#standings" data-fr="Classements →">Standings →</a></div>
+    <div class="sbx-all"><a href="#standings" data-fr="Classements →">Standings →</a></div>
   </div>
   <div class="hd-row">
   <a class="lg" href="#top" aria-label="PSL Canada, home"><img src="img/psl-lockup-white.png" alt="Premier Soccer Leagues Canada"></a>
@@ -962,7 +962,7 @@ const sbTabs=$('#sbxtabs');sbTabs.insertAdjacentHTML('beforeend','<button role="
 const vp=$('#sbxvp');
 function card(m,i){const done=m.st==='ft',hl=done&&m.hs<m.as,al=done&&m.as<m.hs,ko=m.st==='ko';
  return `<div class="sbx-c" data-i="${i}"><div class="sbx-st"><span>${m.d}</span><b class="${m.st==='live'?'lv':''}" data-st="${i}">${stL(m)}</b></div>${cr(m.h)}<span class="sbx-t ${hl?'ls':''}">${m.h}</span><span class="sbx-s ${hl?'ls':''}" data-h="${i}">${ko?'':m.hs}</span>${cr(m.a)}<span class="sbx-t ${al?'ls':''}">${m.a}</span><span class="sbx-s ${al?'ls':''}" data-a="${i}">${ko?'':m.as}</span>${m.st==='live'?`<span class="sbx-pr"><i data-p="${i}" style="transform:scaleX(${m.min/90})"></i></span>`:''}</div>`}
-function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=`<span class="sbx-gp">${l.ab}</span>`+ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
+function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
 function arrows(){$('#sbxl').disabled=vp.scrollLeft<4;$('#sbxr').disabled=vp.scrollLeft+vp.clientWidth>=vp.scrollWidth-4}
 vp.addEventListener('scroll',arrows,{passive:true});addEventListener('resize',arrows);
 $('#sbxl').onclick=()=>vp.scrollBy({left:-vp.clientWidth*.8});$('#sbxr').onclick=()=>vp.scrollBy({left:vp.clientWidth*.8});
