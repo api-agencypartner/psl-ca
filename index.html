@@ -64,7 +64,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .sbx-tabs button{height:30px;padding:0 10px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:12px;letter-spacing:.1em;color:var(--mute);border-radius:3px;transition:background .25s,color .25s}
 .sbx-tabs button:hover{color:#fff}
 .sbx-tabs button[aria-selected=true]{background:rgba(244,241,234,.1);color:#fff}
-.sbx-tabs button img{height:16px;width:auto}
+.sbx-tabs button img{height:22px;width:auto}.sbx-tabs button[data-f]{padding:0 8px;opacity:.6}.sbx-tabs button[data-f]:hover,.sbx-tabs button[data-f][aria-selected=true]{opacity:1}
 .sbx-tabs .lv{display:flex;align-items:center;gap:7px;margin-right:8px;font-weight:700;font-size:12px;letter-spacing:.14em;color:#fff}
 .sbx-tabs .lv i{width:7px;height:7px;border-radius:50%;background:var(--red2);box-shadow:0 0 0 0 rgba(227,48,59,.6);animation:sbp 2s infinite}
 @keyframes sbp{70%{box-shadow:0 0 0 7px rgba(227,48,59,0)}100%{box-shadow:0 0 0 0 rgba(227,48,59,0)}}
@@ -519,7 +519,6 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 @media (max-width:1100px){.tb-wrap{grid-template-columns:1fr}.ap-in{grid-template-columns:1fr}}
 @media (max-width:620px){.tb-t td,.tb-t th{padding:11px 7px}.tb-t td.cl{font-size:15px}.tb-t .hm{display:none}.stage{height:640px}.iph{width:290px;height:598px}.iph-fr{border-radius:54px}.iph-fr::before{border-radius:49px}.iph-sc,.iph-gl{border-radius:41px;inset:13px}.a-live{height:200px}
  .sbx{height:74px}.sbx-tabs button:not(.on-lv),.sbx-all,.sbx-ar{display:none}.sbx-tabs{padding:0 10px 0 14px}.sbx-c{width:196px;padding:11px 14px 10px}}
-@media (max-width:1100px) and (min-width:621px){.sbx-tabs button img{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -958,11 +957,11 @@ const M=[
 const stL=m=>m.st==='live'?m.min+"'":m.st==='ht'?'Half-time':m.st==='ft'?'Full-time':m.ko;
 const cr=n=>{const c=CR[n]||[n.split(' ').map(w=>w[0]).join('').slice(0,3),'#334155'];return `<span class="sbx-cr" style="background:${c[1]}">${c[0]}</span>`};
 let sbxF='all';
-const sbTabs=$('#sbxtabs');sbTabs.insertAdjacentHTML('beforeend','<button role="tab" aria-selected="true" data-f="all">All</button>'+L.map(l=>`<button role="tab" aria-selected="false" data-f="${l.id}"><img src="${S(l.id)}" alt="">${l.ab}</button>`).join(''));
+const sbTabs=$('#sbxtabs');sbTabs.insertAdjacentHTML('beforeend','<button role="tab" aria-selected="true" data-f="all">All</button>'+L.map(l=>`<button role="tab" aria-selected="false" data-f="${l.id}" aria-label="${l.name}" title="${l.name}"><img src="${S(l.id)}" alt=""></button>`).join(''));
 const vp=$('#sbxvp');
 function card(m,i){const done=m.st==='ft',hl=done&&m.hs<m.as,al=done&&m.as<m.hs,ko=m.st==='ko';
  return `<div class="sbx-c" data-i="${i}"><div class="sbx-st"><span>${m.d}</span><b class="${m.st==='live'?'lv':''}" data-st="${i}">${stL(m)}</b></div>${cr(m.h)}<span class="sbx-t ${hl?'ls':''}">${m.h}</span><span class="sbx-s ${hl?'ls':''}" data-h="${i}">${ko?'':m.hs}</span>${cr(m.a)}<span class="sbx-t ${al?'ls':''}">${m.a}</span><span class="sbx-s ${al?'ls':''}" data-a="${i}">${ko?'':m.as}</span>${m.st==='live'?`<span class="sbx-pr"><i data-p="${i}" style="transform:scaleX(${m.min/90})"></i></span>`:''}</div>`}
-function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
+function render(){let h='';L.forEach(l=>{if(sbxF!=='all'&&sbxF!==l.id)return;const ms=M.map((m,i)=>[m,i]).filter(([m])=>m.lg===l.id);if(!ms.length)return;h+=`<span class="sbx-gp">${l.ab}</span>`+ms.map(([m,i])=>card(m,i)).join('')});vp.innerHTML=h;vp.scrollLeft=0;arrows()}
 function arrows(){$('#sbxl').disabled=vp.scrollLeft<4;$('#sbxr').disabled=vp.scrollLeft+vp.clientWidth>=vp.scrollWidth-4}
 vp.addEventListener('scroll',arrows,{passive:true});addEventListener('resize',arrows);
 $('#sbxl').onclick=()=>vp.scrollBy({left:-vp.clientWidth*.8});$('#sbxr').onclick=()=>vp.scrollBy({left:vp.clientWidth*.8});
