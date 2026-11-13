@@ -519,6 +519,36 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 @media (max-width:1100px){.tb-wrap{grid-template-columns:1fr}.ap-in{grid-template-columns:1fr}}
 @media (max-width:620px){.tb-t td,.tb-t th{padding:11px 7px}.tb-t td.cl{font-size:15px}.tb-t .hm{display:none}.stage{height:640px}.iph{width:290px;height:598px}.iph-fr{border-radius:54px}.iph-fr::before{border-radius:49px}.iph-sc,.iph-gl{border-radius:41px;inset:13px}.a-live{height:200px}
  .sbx{height:74px}.sbx-tabs button:not(.on-lv),.sbx-all,.sbx-ar{display:none}.sbx-tabs{padding:0 10px 0 14px}.sbx-c{width:196px;padding:11px 14px 10px}}
+
+/* ===== mobile QA fixes ===== */
+.pw .k{color:#6E7389}
+@media (max-width:1100px){
+  .shd>.btn{justify-self:start}
+  .rl .shd{grid-template-columns:1fr auto;align-items:end}
+}
+@media (max-width:620px){
+  .hd .sbx{transition:height .4s var(--ease),border-color .4s;overflow:hidden}
+  .hd.solid .sbx,.menu-open .hd .sbx{height:0;border-bottom-color:transparent}
+  .h-foot{gap:14px}.h-foot .segs{flex:none}.h-foot .segs span{width:22px}
+  .cap{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1;font-size:11px}
+  .start{grid-template-columns:1fr 1fr;overflow:visible}
+  .start a{min-height:82px;padding:16px 18px;border-bottom:1px solid rgba(10,14,32,.12)}
+  .start a:nth-child(2n){border-right:0}
+  .start a:last-child{grid-column:1/-1}
+  .start b{font-size:28px}.start .ar{top:14px;right:14px;font-size:20px}
+  .stmt p.big{font-size:31px;line-height:1.02}
+  .mx-in{gap:8px;padding-top:110px}.mx-copy{height:150px}
+  .mx-map{width:118%;margin-left:-9%}
+  .mx-pin{width:9%}.mx-pin .lb,.mx-pin::after{display:none}
+  .tb-lg{flex-wrap:nowrap;gap:4px}
+  .tb-lg button{font-size:0;gap:0;padding:7px 9px}.tb-lg button img{height:26px}
+  .tb-ctl{gap:12px}
+  .rl .shd h2{font-size:56px}.rl-nav button{width:44px;height:44px}
+  .rl .shd{margin-bottom:28px}
+  .nw .shd{grid-template-columns:1fr auto;align-items:end}.nw .nw-all{padding:11px 14px;font-size:13px}
+  .t3 .hdr .k-tag{font-size:10px}
+  .ft-top{gap:18px}.ft-top img.s{width:84px}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
