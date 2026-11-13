@@ -59,7 +59,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 /* header */
 .hd{position:fixed;inset:0 0 auto;z-index:100;transition:translate .6s var(--ease),background .4s}
 .hd-row{display:flex;align-items:center;gap:30px;padding:14px var(--pad)}
-.sbx{display:flex;align-items:stretch;height:64px;background:#05071A;border-bottom:1px solid var(--line);font-family:var(--cond);text-transform:uppercase}
+.sbx{display:flex;align-items:stretch;height:80px;background:#05071A;border-bottom:1px solid var(--line);font-family:var(--cond);text-transform:uppercase}
 .sbx-tabs{flex:none;display:flex;align-items:center;gap:2px;padding:0 14px 0 var(--pad);border-right:1px solid var(--line)}
 .sbx-tabs button{height:30px;padding:0 10px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:12px;letter-spacing:.1em;color:var(--mute);border-radius:3px;transition:background .25s,color .25s}
 .sbx-tabs button:hover{color:#fff}
@@ -75,9 +75,9 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .sbx-vp{flex:1;min-width:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
 .sbx-vp::-webkit-scrollbar{display:none}
 .sbx-gp{flex:none;display:flex;align-items:center;padding:0 10px;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:700;font-size:10px;letter-spacing:.18em;color:var(--mute);border-left:1px solid var(--line);background:rgba(244,241,234,.025)}
-.sbx-c{flex:none;width:208px;scroll-snap-align:start;padding:8px 14px 7px;border-left:1px solid var(--line);display:grid;grid-template-columns:18px 1fr auto;column-gap:8px;row-gap:1px;align-items:center;position:relative;transition:background .25s}
+.sbx-c{flex:none;width:224px;scroll-snap-align:start;padding:13px 18px 12px;border-left:1px solid var(--line);display:grid;grid-template-columns:18px 1fr auto;column-gap:9px;row-gap:4px;align-items:center;align-content:center;position:relative;transition:background .25s}
 .sbx-c:hover{background:rgba(244,241,234,.04)}
-.sbx-st{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--mute);margin-bottom:2px}
+.sbx-st{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:10px;letter-spacing:.14em;color:var(--mute);margin-bottom:3px}
 .sbx-st b{font-weight:700;color:#C9CCDA}
 .sbx-st b.lv{color:var(--red2)}
 .sbx-st b.lv::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red2);margin-right:5px;vertical-align:1px;animation:bl 1.4s steps(2) infinite}
@@ -108,7 +108,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .hd .btn{padding:12px 18px;font-size:14px}
 .burger{display:none;width:44px;height:44px;position:relative}.burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--paper);transition:transform .4s var(--ease)}.burger i:first-child{top:17px}.burger i:last-child{top:25px}
 .menu-open .burger i:first-child{transform:translateY(4px) rotate(45deg)}.menu-open .burger i:last-child{transform:translateY(-4px) rotate(-45deg)}
-.mnav{position:fixed;inset:0;z-index:95;padding-top:160px!important;background:var(--red);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:90px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease)}
+.mnav{position:fixed;inset:0;z-index:95;padding-top:180px!important;background:var(--red);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:90px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease)}
 .menu-open .mnav{clip-path:inset(0)}
 .mnav a.big{font-family:var(--disp);font-weight:900;font-size:13vw;line-height:.95;text-transform:uppercase}
 .mnav .shs{display:flex;gap:12px;margin-top:30px}.mnav .shs img{height:48px;width:auto}
@@ -121,7 +121,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .hbg img{width:100%;height:100%;object-fit:cover}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,14,32,.92) 0%,rgba(10,14,32,.55) 45%,rgba(10,14,32,.15) 75%),linear-gradient(0deg,rgba(10,14,32,.95) 0%,transparent 55%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/12 - 1px),rgba(244,241,234,.05) calc(100%/12 - 1px) calc(100%/12))}
-.hin>*{min-width:0}.hin{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;padding:170px var(--pad) 34px;gap:24px}
+.hin>*{min-width:0}.hin{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;padding:190px var(--pad) 34px;gap:24px}
 .h-copy{align-self:end;grid-column:1}
 .app-in .k,.cl-in .k,.pw-head .k{display:flex;align-items:center;gap:14px;margin-bottom:clamp(18px,2vw,32px)}.app-in .k::before,.cl-in .k::before,.pw-head .k::before{content:"";width:36px;height:2px;background:var(--red2);flex:none}.cl-in .k::before{background:#fff}.h-copy>.k{display:flex;align-items:center;gap:14px;margin-bottom:clamp(18px,2vw,32px)}.h-copy>.k::before{content:"";width:36px;height:2px;background:var(--red2);flex:none}.h-copy h1{font-size:clamp(70px,13.4vw,250px);margin-left:-.04em}
 .h-copy h1 .ln{display:block;overflow:hidden;padding-bottom:.02em}
@@ -148,7 +148,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 
 /* start here */
 .start{background:var(--paper);color:var(--ink);display:grid;grid-template-columns:repeat(5,1fr)}
-.start a{padding:30px 24px 26px;border-right:1px solid rgba(10,14,32,.12);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;min-height:190px;transition:color .4s}
+.start a{padding:26px 24px 24px;border-right:1px solid rgba(10,14,32,.12);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;min-height:132px;justify-content:flex-end;transition:color .4s}
 .start a:last-child{border-right:0}
 .start a::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform .55s var(--ease);z-index:0}
 .start a>*{position:relative;z-index:1}
@@ -156,13 +156,13 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .start .k{color:#7A7F95;transition:color .4s}.start a:hover .k{color:#FBDADC}
 .start b{font-family:var(--disp);font-weight:900;font-size:clamp(34px,3.2vw,52px);text-transform:uppercase;line-height:.9}
 .start p{font-size:15px;line-height:1.45;color:#50556B;transition:color .4s;max-width:240px}.start a:hover p{color:#fff}
-.start .ar{position:absolute;right:20px;top:26px;font-family:var(--disp);font-size:26px}
+.start small{font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7A7F95;transition:color .4s}.start a:hover small{color:#FBDADC}.start .ar{position:absolute;right:20px;top:22px;font-family:var(--disp);font-size:26px}
 
 /* statement */
-.stmt{padding:clamp(110px,15vw,220px) var(--pad);background:var(--ink)}
+.stmt{padding:clamp(100px,13vw,200px) var(--pad);background:var(--paper);color:var(--ink);border-top:1px solid rgba(10,14,32,.1)}
 .stmt .k{margin-bottom:34px;display:flex;gap:18px;align-items:center}.stmt .k::before{content:"";width:40px;height:2px;background:var(--red2)}
 .stmt p.big{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(40px,5.6vw,98px);line-height:.98;letter-spacing:.002em;max-width:1500px}
-.stmt .w{opacity:.16}.stmt .w.red{color:var(--red2)}
+.stmt .w{opacity:.14}.stmt .w.red{color:var(--red2)}
 .stmt .w img{display:inline-block;height:.82em;width:auto;vertical-align:-.08em;margin:0 .06em}
 
 /* map scene */
@@ -226,14 +226,14 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .nx span{background:rgba(0,0,0,.25);padding:7px 10px}
 
 /* pathway */
-.pw{background:var(--navy);position:relative;overflow:hidden}
+.pw{background:var(--paper);color:var(--ink);position:relative;overflow:hidden}
 .pw-pin{height:100svh;display:flex;flex-direction:column;justify-content:center;padding:90px 0 40px}
 .pw-head{padding:0 var(--pad);display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
 .pw-head h2{font-size:clamp(54px,7vw,130px)}
 .pw-head p{max-width:380px;color:#B9BDCE;line-height:1.55}
 .pw-track{display:flex;gap:24px;padding:0 var(--pad);will-change:transform;position:relative}
-.pw-prog{margin:0 var(--pad) 26px;height:3px;background:var(--line)}.pw-line{height:100%;background:var(--red2);transform-origin:left;transform:scaleX(0)}
-.st{flex:none;width:min(62vw,880px);height:min(56vh,520px);display:grid;grid-template-columns:1fr 1.05fr;background:var(--navy2);position:relative;overflow:hidden}
+.pw-prog{margin:0 var(--pad) 26px;height:3px;background:rgba(10,14,32,.12)}.pw-line{height:100%;background:var(--red2);transform-origin:left;transform:scaleX(0)}
+.st{color:var(--paper);flex:none;width:min(62vw,880px);height:min(56vh,520px);display:grid;grid-template-columns:1fr 1.05fr;background:var(--navy2);position:relative;overflow:hidden}
 .st .tx{padding:clamp(24px,2.8vw,44px);display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
 .st .num{font-family:var(--disp);font-weight:900;font-size:clamp(90px,10vw,170px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(244,241,234,.35)}
 .st h3{font-family:var(--disp);font-weight:900;font-size:clamp(36px,3.6vw,64px);text-transform:uppercase;line-height:.9;margin-top:auto}
@@ -242,7 +242,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .st.here{background:var(--red)}.st.here .num{-webkit-text-stroke-color:rgba(255,255,255,.6)}.st.here p{color:#FCE3E4}.st.here .tg{background:var(--paper);color:var(--red);box-shadow:none}
 .st .im{position:relative;overflow:hidden}.st .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .st .im figcaption{position:absolute;left:12px;bottom:12px;font-family:var(--cond);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(10,14,32,.75);padding:5px 8px}
-.st.can{background:var(--paper);color:var(--ink)}.st.can .num{-webkit-text-stroke-color:rgba(10,14,32,.3)}.st.can p{color:#50556B}
+.st.can{background:var(--ink)}
 .st.can .im{background:var(--red);display:grid;place-items:center}.st.can .im img{position:static;width:46%;height:auto;object-fit:contain}
 
 /* champions */
@@ -336,7 +336,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 .tb-note i{display:inline-block;width:10px;height:10px;background:color-mix(in srgb,var(--a) 60%,transparent);margin-right:6px;vertical-align:-1px}
 
 /* ===== SPOTLIGHT REELS ===== */
-.rl{background:var(--navy);padding:clamp(90px,10vw,150px) 0;overflow:hidden}
+.rl{background:var(--red);padding:clamp(90px,10vw,150px) 0;overflow:hidden}
 .rl-tr{display:flex;gap:14px;padding:0 var(--pad);cursor:grab;user-select:none;will-change:transform}
 .rl-tr.drag{cursor:grabbing}
 .rv{flex:none;width:clamp(220px,19vw,300px);aspect-ratio:9/16;position:relative;overflow:hidden;border-radius:14px;background:var(--navy2);transition:transform .5s var(--ease)}
@@ -458,15 +458,18 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 .a-cd .vs{font-family:var(--cond);font-weight:700;text-transform:uppercase;font-size:14px;margin-top:10px}
 .a-btn{margin:12px 16px 0;height:46px;border-radius:14px;background:var(--paper);color:var(--ink);display:grid;place-items:center;font-family:var(--cond);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
 
+.rl .rl-nav button{box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}.rl .rl-nav button:hover{background:#fff;color:var(--red)}.rl .rv{box-shadow:0 24px 50px rgba(80,0,10,.35)}
+.nw .shd{align-items:end}.nw .nw-all{box-shadow:inset 0 0 0 1px rgba(10,14,32,.3);color:var(--ink)}.nw .nw-all::before{background:var(--ink)}.nw .nw-all:hover{color:var(--paper)}
+.clubs .k::before{background:var(--red2)!important}.rl .shd{margin-bottom:36px}
 /* clubs */
-.clubs{background:var(--red);padding:clamp(90px,11vw,160px) var(--pad);position:relative;overflow:hidden}
-.clubs .wm{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:44vw;opacity:.12;pointer-events:none}
+.clubs{background:var(--paper);color:var(--ink);padding:clamp(90px,11vw,160px) var(--pad);position:relative;overflow:hidden}
+.clubs .wm{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:44vw;opacity:.05;pointer-events:none}
 .cl-in{display:grid;grid-template-columns:1.2fr 1fr;gap:5vw;align-items:end;position:relative}
 .clubs h2{font-size:clamp(64px,9vw,170px)}
-.clubs .k{color:#FBDADC}
-.clubs p{color:#FCE3E4;font-size:18px;line-height:1.55;max-width:460px;margin-bottom:28px}
+.clubs .k{color:#6E7389}.clubs .b-paper{background:var(--red);color:#fff}.clubs .b-paper::before{background:var(--ink)}.clubs .b-ghost{box-shadow:inset 0 0 0 1px rgba(10,14,32,.3)}.clubs .b-ghost::before{background:var(--ink)}.clubs .b-ghost:hover{color:var(--paper)}
+.clubs p{color:#50556B;font-size:18px;line-height:1.55;max-width:460px;margin-bottom:28px}
 .ticks{list-style:none;margin-bottom:34px}
-.ticks li{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.3);display:flex;justify-content:space-between}
+.ticks li{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(10,14,32,.14);display:flex;justify-content:space-between}
 .ticks li span{opacity:.7;font-size:14px;letter-spacing:.14em}
 
 /* footer */
@@ -485,7 +488,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 /* responsive */
 @media (max-width:1100px){
   .hd nav,.hd .sh,.hd .btn{display:none}.burger{display:block}
-  .hin{grid-template-columns:1fr;padding-top:160px}.h-idx{display:none}
+  .hin{grid-template-columns:1fr;padding-top:176px}.h-idx{display:none}
   .start{grid-template-columns:repeat(2,1fr)}.start a{min-height:150px;border-bottom:1px solid rgba(10,14,32,.12)}
   .mx-in{grid-template-columns:1fr;grid-template-rows:auto auto;padding-top:90px;align-content:center;gap:30px}.mx-map{justify-self:stretch;width:100%}.mx-pin{width:10.5%}.h-foot .sc{display:none}.cap{flex:1;line-height:1.4}
   .mx-copy{height:200px}.mx-step h2{font-size:clamp(44px,10vw,80px);margin:8px 0 10px}.mx-step p{font-size:16px}
@@ -505,7 +508,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   .shd{grid-template-columns:1fr}
 }
 @media (max-width:620px){
-  .start{grid-template-columns:1fr}
+  .start{grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;scroll-snap-type:x mandatory}.start a{min-height:110px;scroll-snap-align:start;border-bottom:0}
   .ip{width:250px;height:520px;border-radius:46px}.ip .scr{border-radius:36px}.ip1{left:0}.ip2{right:0}
   .a-card{height:170px}.phones{height:560px}
   .list a{grid-template-columns:90px 1fr;}.list img{display:none}
@@ -515,7 +518,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 }
 @media (max-width:1100px){.tb-wrap{grid-template-columns:1fr}.ap-in{grid-template-columns:1fr}}
 @media (max-width:620px){.tb-t td,.tb-t th{padding:11px 7px}.tb-t td.cl{font-size:15px}.tb-t .hm{display:none}.stage{height:640px}.iph{width:290px;height:598px}.iph-fr{border-radius:54px}.iph-fr::before{border-radius:49px}.iph-sc,.iph-gl{border-radius:41px;inset:13px}.a-live{height:200px}
- .sbx{height:60px}.sbx-tabs button:not(.on-lv),.sbx-all,.sbx-ar{display:none}.sbx-tabs{padding:0 10px 0 14px}.sbx-c{width:184px;padding:7px 12px}}
+ .sbx{height:74px}.sbx-tabs button:not(.on-lv),.sbx-all,.sbx-ar{display:none}.sbx-tabs{padding:0 10px 0 14px}.sbx-c{width:196px;padding:11px 14px 10px}}
 @media (max-width:1100px) and (min-width:621px){.sbx-tabs button img{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -564,7 +567,6 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   </div>
   <div class="hin">
     <div class="h-copy">
-      <p class="k" data-fr="Premières Ligues de soccer du Canada · Pro-am national">Premier Soccer Leagues Canada · National pro-am</p>
       <h1 class="d" id="h1"><span class="ln"><span data-fr="Trouvez votre">Find your</span></span><span class="ln"><span><span class="r" data-fr="prochain">next</span> <span data-fr="niveau.">level.</span></span></span></h1>
       <div class="h-row">
         <p data-fr="Cinq ligues. Une norme nationale. Le parcours de votre club communautaire jusqu'à la CPL, la NSL et l'équipe nationale.">Five leagues. One national standard. The pathway from your community club to the CPL, the NSL and Canada.</p>
@@ -578,16 +580,15 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 
 <!-- START HERE -->
 <nav class="start" aria-label="Start here">
-  <a href="#leagues"><span class="k" data-fr="Je suis…">I'm a…</span><b data-fr="Joueur">Player</b><p data-fr="Trouvez la ligue de votre province et votre prochaine étape.">Find the league in your province and your next step up.</p><span class="ar">→</span></a>
-  <a href="#pathway"><span class="k" data-fr="Je suis…">I'm a…</span><b data-fr="Parent">Parent</b><p data-fr="Comprenez le parcours, du club communautaire au soccer professionnel.">See how the pathway works, from community club to the pro game.</p><span class="ar">→</span></a>
-  <a href="#clubs"><span class="k" data-fr="Je suis…">I'm a…</span><b>Club</b><p data-fr="Licences de club, normes et expansion.">Club licensing, standards and expansion.</p><span class="ar">→</span></a>
-  <a href="#app"><span class="k" data-fr="Je suis…">I'm a…</span><b data-fr="Partisan">Fan</b><p data-fr="Suivez les cinq ligues dans l'appli PSLC Matchday.">Follow all five leagues in the PSLC Matchday app.</p><span class="ar">→</span></a>
-  <a href="#clubs"><span class="k" data-fr="Je suis…">I'm a…</span><b data-fr="Partenaire">Partner</b><p data-fr="Associez-vous à la plateforme pro-am nationale du Canada.">Partner with Canada's national pro-am platform.</p><span class="ar">→</span></a>
+  <a href="#leagues"><small>For</small><b>Players</b><span class="ar">→</span></a>
+  <a href="#pathway"><small>For</small><b>Parents</b><span class="ar">→</span></a>
+  <a href="#clubs"><small>For</small><b>Clubs</b><span class="ar">→</span></a>
+  <a href="#app"><small>For</small><b>Fans</b><span class="ar">→</span></a>
+  <a href="#clubs"><small>For</small><b>Partners</b><span class="ar">→</span></a>
 </nav>
 
 <!-- STATEMENT -->
 <section class="stmt" aria-label="About PSL Canada">
-  <p class="k">Since 2022 · Formerly League1 Canada</p>
   <p class="big" id="stmt">Premier Soccer Leagues Canada connects community clubs to the professional game. Five leagues, from the Pacific to Québec, men's and women's, playing to <span class="red">one national standard.</span> This is where Canada's next level is made.</p>
 </section>
 
@@ -611,23 +612,22 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 <section class="lg-sec" id="leagues">
   <div class="shd">
     <div><p class="k" data-fr="Trouvez votre ligue">Find your league</p><h2 class="d"><span class="ln2"><span data-fr="Où">Where do</span></span><span class="ln2"><span data-fr="jouez-vous?">you play?</span></span></h2></div>
-    <p data-fr="Choisissez votre région. Chaque ligue a des divisions masculines et féminines, et la même prochaine étape.">Choose your region. Every league has men's and women's divisions, plays to the same standard and leads to the same next step.</p>
   </div>
   <div class="acc" id="acc" role="tablist" aria-label="Leagues, west to east"></div>
 </section>
 
 <!-- STANDINGS -->
 <section class="tb dark" id="standings">
-  <div class="shd"><div><p class="k" data-fr="Classements">Standings</p><h2 class="d"><span class="ln2"><span data-fr="Le classement.">The table.</span></span></h2></div><p>Every league and division, with form, the playoff line and the title race.</p></div>
+  <div class="shd"><div><h2 class="d"><span class="ln2"><span data-fr="Classements.">Standings.</span></span></h2></div></div>
   <div class="tb-ctl"><div class="tb-lg" id="tblg" role="tablist" aria-label="League"></div><div class="tb-dv" id="tbdv"><button aria-pressed="true" data-d="m">Men's</button><button aria-pressed="false" data-d="w">Women's</button></div></div>
   <div class="tb-wrap" id="tbw">
     <div class="tb-t"><table><thead><tr><th>Pos</th><th>Club</th><th>P</th><th class="hm">W</th><th class="hm">D</th><th class="hm">L</th><th>GD</th><th>Pts</th><th class="hm">Form</th></tr></thead><tbody id="tbb"></tbody></table></div>
     <div class="tb-side">
-      <div class="tb-card"><h4><span>Leader</span><span class="prev">Preview data</span></h4><div class="tb-lead" id="tblead"></div></div>
+      <div class="tb-card"><h4><span>Leader</span></h4><div class="tb-lead" id="tblead"></div></div>
       <div class="tb-card"><h4><span>Title race</span><span>Points</span></h4><div class="race" id="tbrace"></div></div>
     </div>
   </div>
-  <p class="tb-note"><span><i></i>Playoff places</span><span>Dashed line: playoff cut</span><span>Club lists and tables are preview data until the league feeds are connected</span></p>
+  <p class="tb-note"><span><i></i>Playoff places</span><span>Preview data until the league feeds are connected</span></p>
 </section>
 
 <!-- PATHWAY -->
@@ -635,21 +635,20 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   <div class="pw-pin" id="pwpin">
     <div class="pw-head">
       <div><p class="k">The pathway</p><h2 class="d" data-fr="D'ici au monde.">From here to the world.</h2></div>
-      <p data-fr="La PSL est le troisième palier du soccer canadien, juste sous la CPL et la NSL.">PSL is tier three of Canadian soccer, one level below the CPL and the NSL. Here's how a player moves up.</p>
     </div>
     <div class="pw-prog"><div class="pw-line" id="pwline"></div></div>
     <div class="pw-track" id="pwtrack">
-      <article class="st"><div class="tx"><span class="num">01</span><span class="tg">Grassroots</span><h3>Community club</h3><p>Every player starts somewhere: a local club, a youth team, a field in town.</p></div><figure class="im"><img src="img/photo-15.jpg" alt="Two players contest a header on a sunny day"><figcaption>Where it starts</figcaption></figure></article>
+      <article class="st"><div class="tx"><span class="num">01</span><h3>Community club</h3><p>Every player starts somewhere: a local club, a youth team, a field in town.</p></div><figure class="im"><img src="img/photo-15.jpg" alt="Two players contest a header on a sunny day"><figcaption>Where it starts</figcaption></figure></article>
       <article class="st here"><div class="tx"><span class="num">02</span><span class="tg">You are here</span><h3>Your PSL league</h3><p>Pro-am soccer at tier three. Licensed clubs, one national standard, and men's and women's divisions.</p></div><figure class="im"><img src="img/photo-13.jpg" alt="A Simcoe County Rovers player on the ball at night"><figcaption>OPL · Women's division</figcaption></figure></article>
-      <article class="st"><div class="tx"><span class="num">03</span><span class="tg">Professional</span><h3>CPL &amp; NSL</h3><p>One level up: the Canadian Premier League and the Northern Super League, Canada's professional game.</p></div><figure class="im"><img src="img/photo-01.jpg" alt="An Inter Toronto FC player celebrates a goal"><figcaption>Inter Toronto FC · CPL</figcaption></figure></article>
-      <article class="st can"><div class="tx"><span class="num">04</span><span class="tg">International</span><h3>Canada</h3><p>The national teams: the top of the pathway, and where every PSL graduate points the next player.</p></div><figure class="im"><img src="img/psl-shield-white.png" alt=""></figure></article>
+      <article class="st"><div class="tx"><span class="num">03</span><h3>CPL &amp; NSL</h3><p>One level up: the Canadian Premier League and the Northern Super League, Canada's professional game.</p></div><figure class="im"><img src="img/photo-01.jpg" alt="An Inter Toronto FC player celebrates a goal"><figcaption>Inter Toronto FC · CPL</figcaption></figure></article>
+      <article class="st can"><div class="tx"><span class="num">04</span><h3>Canada</h3><p>The national teams: the top of the pathway, and where every PSL graduate points the next player.</p></div><figure class="im"><img src="img/psl-shield-white.png" alt=""></figure></article>
     </div>
   </div>
 </section>
 
 <!-- CHAMPIONS -->
 <section class="ch dark" id="champions">
-  <div class="shd"><div><p class="k" data-fr="Saison 2026">2026 season</p><h2 class="d"><span class="ln2"><span>Champions.</span></span></h2></div><p>Real clubs from real towns, lifting trophies across the country.</p></div>
+  <div class="shd"><div><h2 class="d"><span class="ln2"><span>2026 Champions.</span></span></h2></div></div>
   <div class="bento">
     <figure class="tile t1"><img class="p" src="img/photo-17.jpg" alt="OPL 2026 champions celebrate with the trophy inside a dome"><div class="m"><div><span class="k-tag">Ontario Premier League</span><b>OPL 2026<br>Winners</b></div><img src="img/opl-shield.png" alt="OPL"></div></figure>
     <figure class="tile t2 tp"><img class="p" src="img/photo-02.jpg" alt="BCPL 2026 champions lift the trophy under the league arch"><div class="m"><div><span class="k-tag">British Columbia Premier League</span><b>BCPL 2026<br>Winners</b></div><img src="img/bcpl-shield.png" alt="BCPL"></div></figure>
@@ -657,22 +656,9 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   </div>
 </section>
 
-<!-- SPOTLIGHT -->
-<section class="rl dark" id="spotlight">
-  <div class="shd"><div><p class="k">Spotlight</p><h2 class="d"><span class="ln2"><span>Reels.</span></span></h2></div><div class="rl-nav"><button id="rlp" aria-label="Previous reels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button><button id="rln" aria-label="Next reels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
-  <div class="rl-tr" id="rltr"></div>
-</section>
-<div class="sv" id="sv" role="dialog" aria-modal="true" aria-label="Reel viewer">
-  <div class="sv-f"><img class="p" id="svimg" src="" alt=""><div class="sv-bars" id="svbars"></div>
-    <div class="sv-hd"><img id="svlg" src="" alt=""><span id="svlt"></span><button id="svx" aria-label="Close">×</button></div>
-    <button class="sv-tap l" id="svl" aria-label="Previous"></button><button class="sv-tap r" id="svr" aria-label="Next"></button>
-    <div class="sv-bt"><b id="svt"></b><span id="svs"></span></div>
-  </div>
-</div>
-
 <!-- NEWS -->
 <section class="nw" id="news">
-  <div class="shd"><div><p class="k" data-fr="Dernières nouvelles">Latest</p><h2 class="d"><span class="ln2"><span data-fr="Nouvelles.">News.</span></span></h2></div><p>The latest from across the system.</p></div>
+  <div class="shd"><div><h2 class="d"><span class="ln2"><span data-fr="Nouvelles.">News.</span></span></h2></div><a class="btn b-ghost nw-all" href="#news">All news</a></div>
   <div class="nw-grid">
     <a class="feat" href="#system" data-cur="Read"><div class="vis"><span class="stamp">New identity</span><img class="lk" src="img/psl-lockup-white.png" alt="Premier Soccer Leagues Canada lockup"></div><div class="meta"><span class="tg">PSL</span><time datetime="2026-01-27">Jan 27, 2026</time></div><h3>League1 Canada becomes Premier Soccer Leagues Canada</h3><p>A new name and one shared identity across the national pro-am system and its provincial leagues, designed alongside the Canadian Premier League.</p></a>
     <div class="list">
@@ -683,6 +669,19 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
     </div>
   </div>
 </section>
+
+<!-- SPOTLIGHT -->
+<section class="rl dark" id="spotlight">
+  <div class="shd"><div><h2 class="d"><span class="ln2"><span>Spotlight.</span></span></h2></div><div class="rl-nav"><button id="rlp" aria-label="Previous reels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button><button id="rln" aria-label="Next reels"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
+  <div class="rl-tr" id="rltr"></div>
+</section>
+<div class="sv" id="sv" role="dialog" aria-modal="true" aria-label="Reel viewer">
+  <div class="sv-f"><img class="p" id="svimg" src="" alt=""><div class="sv-bars" id="svbars"></div>
+    <div class="sv-hd"><img id="svlg" src="" alt=""><span id="svlt"></span><button id="svx" aria-label="Close">×</button></div>
+    <button class="sv-tap l" id="svl" aria-label="Previous"></button><button class="sv-tap r" id="svr" aria-label="Next"></button>
+    <div class="sv-bt"><b id="svt"></b><span id="svs"></span></div>
+  </div>
+</div>
 
 <!-- APP -->
 <section class="ap" id="app">
@@ -741,7 +740,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 
 <!-- CLUBS -->
 <section class="clubs" id="clubs">
-  <img class="wm" src="img/psl-shield-white.png" alt="">
+  <img class="wm" src="img/psl-shield.png" alt="">
   <div class="cl-in">
     <div><p class="k" data-fr="Clubs et partenaires">Clubs &amp; partners</p><h2 class="d"><span class="ln2"><span data-fr="Entrez">Bring your</span></span><span class="ln2"><span data-fr="dans le système.">club in.</span></span></h2></div>
     <div>
