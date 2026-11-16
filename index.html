@@ -816,7 +816,7 @@ const acc=document.getElementById('acc');
 acc.innerHTML=L.map((l,i)=>`<article class="pn${i===0?' on':''}" role="tab" tabindex="0" aria-selected="${i===0}" style="--a:${l.a};--b:${l.b}" data-i="${i}">
   ${l.img?`<div class="ph"><img src="img/${l.img}.jpg" alt=""></div>`:`<img class="pat" src="${l.id==='plq'?'img/plq-shield-white.png':'img/ppl-shield-white.png'}" alt="">`}
   <div class="tab"><img src="${S(l.id)}" alt=""><b>${l.ab}</b><small>${l.reg}</small></div>
-  <div class="bd"><div class="top"><img src="${S(l.id)}" alt="${l.ab} shield"><div><span class="reg">${l.reg}</span><h3>${l.id==='plq'?'Québec':l.name}</h3></div></div>
+  <div class="bd"><div class="top"><img src="${S(l.id)}" alt="${l.ab} shield"><div><h3>${l.id==='plq'?'Québec':l.name}</h3></div></div>
   <dl class="fx">${l.fx.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl>
   <div class="act">${l.site?`<a class="btn b-lg" href="${l.site}" target="_blank" rel="noopener">Visit ${l.ab}<svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 12h16M13 6l6 6-6 6"/></svg></a>`:`<span class="btn b-lg" style="opacity:.9">League site coming soon</span>`}<span class="nx">Next step <span>CPL · NSL</span></span></div></div>
 </article>`).join('');
