@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PSL Canada — Find your next level</title>
+<title>PSL Canada — Local clubs. National stage.</title>
 <meta name="description" content="Premier Soccer Leagues Canada is the national pro-am platform: five leagues, one standard, and the pathway from your community club to the CPL, the NSL and Canada.">
 <style>
 @font-face{font-family:"BSD";src:url(fonts/big-shoulders-display-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
@@ -126,7 +126,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .app-in .k,.cl-in .k,.pw-head .k{display:flex;align-items:center;gap:14px;margin-bottom:clamp(18px,2vw,32px)}.app-in .k::before,.cl-in .k::before,.pw-head .k::before{content:"";width:36px;height:2px;background:var(--red2);flex:none}.cl-in .k::before{background:#fff}.h-copy>.k{display:flex;align-items:center;gap:14px;margin-bottom:clamp(18px,2vw,32px)}.h-copy>.k::before{content:"";width:36px;height:2px;background:var(--red2);flex:none}.h-copy h1{font-size:clamp(70px,13.4vw,250px);margin-left:-.04em}
 .h-copy h1 .ln{display:block;overflow:hidden;padding-bottom:.02em}
 .h-copy h1 .ln>span{display:inline-block}
-.h-copy h1 .r{color:var(--red2)}html[lang=fr] .h-copy h1{font-size:clamp(52px,8.6vw,164px)}html[lang=fr] .h-copy h1 .ln>span{white-space:nowrap}@media (max-width:1100px){html[lang=fr] .h-copy h1{font-size:12.6vw}}
+.h-copy h1 .r{color:var(--red2)}.h-copy h1{font-size:clamp(52px,min(8.8vw,calc((100vw - 2 * var(--pad) - 340px) / 7)),168px)!important}.h-copy h1 .ln>span{white-space:nowrap}@media (max-width:1100px){.h-copy h1{font-size:12.6vw!important}}
 .h-row{display:flex;gap:40px;align-items:flex-end;margin-top:30px;flex-wrap:wrap}
 .h-row p{max-width:470px;font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:#CDD0DD}
 .h-row .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -380,7 +380,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 /* ===== APP ===== */
 .ap{background:radial-gradient(70% 80% at 70% 50%,#1B2557,var(--navy) 70%);padding:clamp(90px,11vw,160px) var(--pad);overflow:hidden;position:relative}
 .ap-in{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
-.ap h2{font-size:clamp(60px,7.4vw,136px)}
+.ap h2{font-size:clamp(46px,5.6vw,108px)}@media (max-width:1100px){.ap h2{font-size:12.4vw}}
 .ap .kk{margin-bottom:22px}
 .ap-ft{list-style:none;margin:34px 0;display:grid;gap:4px;max-width:480px}
 .ap-ft li button{width:100%;text-align:left;display:grid;grid-template-columns:34px 1fr;gap:6px 14px;padding:16px 0;border-top:1px solid var(--line);position:relative}
@@ -595,7 +595,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   </div>
   <div class="hin">
     <div class="h-copy">
-      <h1 class="d" id="h1"><span class="ln"><span data-fr="Trouvez votre">Find your</span></span><span class="ln"><span><span class="r" data-fr="prochain">next</span> <span data-fr="niveau.">level.</span></span></span></h1>
+      <h1 class="d" id="h1"><span class="ln"><span data-fr="Clubs locaux.">Local clubs.</span></span><span class="ln"><span class="r" data-fr="Scène nationale.">National stage.</span></span></h1>
       <div class="h-row">
         <p data-fr="Cinq ligues. Une norme nationale. Le parcours de votre club communautaire jusqu'à la CPL, la NSL et l'équipe nationale.">Five leagues. One national standard. The pathway from your community club to the CPL, the NSL and Canada.</p>
         <div class="cta"><a class="btn b-red" href="#leagues"><span data-fr="Trouvez votre ligue">Find your league</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 12h16M13 6l6 6-6 6"/></svg></a><a class="btn b-ghost" href="#pathway" data-fr="Le parcours">See the pathway</a></div>
@@ -716,7 +716,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   <div class="ap-in">
     <div>
       <p class="kk">PSLC Matchday</p>
-      <h2 class="d"><span class="ln2"><span>Your season,</span></span><span class="ln2"><span style="color:var(--red2)">in your pocket.</span></span></h2>
+      <h2 class="d"><span class="ln2"><span>Your season,</span></span><span class="ln2"><span style="color:var(--red2);white-space:nowrap">in your pocket.</span></span></h2>
       <ul class="ap-ft" id="apft">
         <li><button class="on" data-s="0"><span class="n">01</span><b>Live matchday</b><p>Live scores, momentum and goal alerts from every league, men's and women's.</p></button></li>
         <li><button data-s="1"><span class="n">02</span><b>Every table</b><p>Standings, form and the playoff line for your league, updated as results come in.</p></button></li>
