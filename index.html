@@ -462,18 +462,18 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 .nw .shd{align-items:end}.nw .nw-all{box-shadow:inset 0 0 0 1px rgba(10,14,32,.3);color:var(--ink)}.nw .nw-all::before{background:var(--ink)}.nw .nw-all:hover{color:var(--paper)}
 .clubs .k::before{background:var(--red2)!important}.rl .shd{margin-bottom:36px}
 /* clubs */
-.clubs{background:var(--navy);color:var(--paper);padding:clamp(90px,11vw,160px) var(--pad);position:relative;overflow:hidden}
-.clubs .wm{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:44vw;opacity:.06;pointer-events:none}
+.clubs{background:var(--paper);color:var(--ink);padding:clamp(90px,11vw,160px) var(--pad);position:relative;overflow:hidden}
+.clubs .wm{position:absolute;right:-6vw;top:50%;transform:translateY(-50%);width:44vw;opacity:.05;pointer-events:none}
 .cl-in{display:grid;grid-template-columns:1.2fr 1fr;gap:5vw;align-items:end;position:relative}
 .clubs h2{font-size:clamp(64px,9vw,170px)}
-.clubs .k{color:var(--mute)}.clubs .b-paper{background:var(--red);color:#fff}.clubs .b-paper::before{background:var(--paper)}.clubs .b-paper:hover{color:var(--ink)}
-.clubs p{color:#B9BDCE;font-size:18px;line-height:1.55;max-width:460px;margin-bottom:28px}
+.clubs .k{color:#6E7389}.clubs .b-paper{background:var(--red);color:#fff}.clubs .b-paper::before{background:var(--ink)}.clubs .b-ghost{box-shadow:inset 0 0 0 1px rgba(10,14,32,.3)}.clubs .b-ghost::before{background:var(--ink)}.clubs .b-ghost:hover{color:var(--paper)}
+.clubs p{color:#50556B;font-size:18px;line-height:1.55;max-width:460px;margin-bottom:28px}
 .ticks{list-style:none;margin-bottom:34px}
-.ticks li{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.ticks li{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(10,14,32,.14);display:flex;justify-content:space-between}
 .ticks li span{opacity:.7;font-size:14px;letter-spacing:.14em}
 
 /* footer */
-.ft{border-top:1px solid var(--line);background:var(--ink);padding:clamp(80px,10vw,140px) var(--pad) 30px;overflow:hidden}
+.ft{background:var(--ink);padding:clamp(80px,10vw,140px) var(--pad) 30px;overflow:hidden}
 .ft-top{display:grid;grid-template-columns:auto auto 1fr;gap:clamp(24px,3vw,56px);align-items:center}.ft-top .cta{justify-self:end;text-align:right}.ft-top .cta p{font-family:var(--disp);font-weight:900;font-size:clamp(40px,4.4vw,80px);text-transform:uppercase;line-height:.88;margin-bottom:24px}
 .ft-top img.s{width:clamp(130px,15vw,250px)}
 .ft-top img.w{width:clamp(180px,20vw,330px)}
@@ -549,43 +549,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
   .t3 .hdr .k-tag{font-size:10px}
   .ft-top{gap:18px}.ft-top img.s{width:84px}
 }
-
-/* ===== APP v2 layout (light, maple, two phones) ===== */
-.ap2{background:#fff;color:var(--ink);padding:clamp(90px,10vw,150px) var(--pad) 0;overflow:hidden;position:relative}
-.ap2 .ap-in{grid-template-columns:.9fr 1.1fr;align-items:start;gap:4vw;position:relative;z-index:1}
-.ap2 .ap-in>div:first-child{padding-bottom:clamp(90px,10vw,150px)}
-.ap-pill{display:inline-flex;align-items:center;margin-bottom:30px}
-.ap-pill .ap-ic{width:52px;height:52px;border-radius:50%;background:var(--red);display:grid;place-items:center;position:relative;z-index:1}
-.ap-pill .ap-ic img{width:24px}
-.ap-pill>span:last-child{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;padding:13px 22px 13px 30px;margin-left:-14px;border:1.5px solid var(--ink);border-radius:99px}
-.ap2 h2{font-size:clamp(52px,6vw,112px)!important;line-height:.88}
-.ap2 .ap-ft{margin:42px 0 44px;max-width:520px}
-.ap2 .ap-ft li button{border-top:0;border-bottom:1px solid rgba(10,14,32,.14);padding:22px 0;grid-template-columns:62px 1fr;align-items:center}
-.ap2 .ap-ft li:last-child button{border-bottom:0}
-.ap2 .ap-ft li button::after{top:auto;bottom:-1px;background:var(--red)}
-.ap2 .ap-ft .n{font-size:clamp(32px,3vw,46px);color:var(--red);line-height:.9}
-.ap2 .ap-ft b{font-size:clamp(30px,2.8vw,44px);opacity:1;color:var(--ink)}
-.ap2 .ap-ft p{display:none}
-.ap2 .ap-ft .on .n{color:var(--red)}
-.ap-leaf{position:absolute;right:-12vw;top:clamp(120px,14vw,220px);width:min(64vw,1000px);pointer-events:none;z-index:0}
-.ap-leaf svg{width:100%;height:auto;fill:var(--red);display:block}
-.ap2 .stage{height:auto;min-height:0;display:block;perspective:none;position:relative;align-self:end}
-.ap2 .phones2{position:relative;width:100%;justify-self:stretch;height:clamp(560px,52vw,780px)}.ap2 .stage{place-items:stretch!important;display:block!important;width:100%}
-.ap2 .iph{position:absolute;transform:none!important;width:340px;height:700px}
-.ap2 .iph.front{right:2%;bottom:-120px;transform:scale(1.18)!important;transform-origin:bottom right;z-index:2}
-.ap2 .iph.back{left:2%;bottom:-170px;z-index:1}
-.ap2 .iph-sc{color:var(--paper)}.ap2 .iph .iph-fr{box-shadow:0 0 0 1px rgba(0,0,0,.6),inset 0 0 0 1.5px rgba(255,255,255,.28),inset 0 0 0 4px rgba(0,0,0,.35),0 50px 80px rgba(60,0,10,.28)}
-@media (max-width:1100px){
-  .ap2 .ap-in{grid-template-columns:1fr}.ap2 .ap-in>div:first-child{padding-bottom:0}
-  .ap-leaf{right:-30vw;top:auto;bottom:-10vw;width:110vw}
-  .ap2 .phones2{height:620px;max-width:640px;margin:0 auto}
-}
-@media (max-width:620px){
-  .ap2 .phones2{height:500px}
-  .ap2 .iph{width:250px;height:515px}.ap2 .iph .iph-fr{border-radius:46px}.ap2 .iph .iph-fr::before{border-radius:41px}.ap2 .iph .iph-sc,.ap2 .iph .iph-gl{border-radius:34px;inset:12px}
-  .ap2 .iph.front{right:-6%;transform:scale(1)!important;bottom:-60px}.ap2 .iph.back{left:-8%;bottom:-120px}
-  .ap-pill>span:last-child{font-size:13px;padding:11px 16px 11px 26px}
-}
+.list a>div:nth-child(2){display:grid;grid-template-columns:auto;row-gap:8px}.list a>div:nth-child(2) h4{margin-top:0}.list .dt{align-self:start;line-height:.82;margin-top:var(--tgh,31px)}.list a{align-items:start}.list a img{align-self:center}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -750,12 +714,11 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 </div>
 
 <!-- APP -->
-<section class="ap ap2" id="app">
-  <div class="ap-leaf"><svg viewBox="-2100 -2200 4200 4300" aria-hidden="true"><path d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z"/></svg></div>
+<section class="ap" id="app">
   <div class="ap-in">
     <div>
-      <p class="ap-pill"><span class="ap-ic"><img src="img/psl-shield-white.png" alt=""></span><span>PSLC Matchday app</span></p>
-      <h2 class="d"><span class="ln2"><span>Your season</span></span><span class="ln2"><span>in your pocket.</span></span></h2>
+      <p class="kk">PSLC Matchday</p>
+      <h2 class="d"><span class="ln2"><span>Your season,</span></span><span class="ln2"><span style="color:var(--red2);white-space:nowrap">in your pocket.</span></span></h2>
       <ul class="ap-ft" id="apft">
         <li><button class="on" data-s="0"><span class="n">01</span><b>Live matchday</b><p>Live scores, momentum and goal alerts from every league, men's and women's.</p></button></li>
         <li><button data-s="1"><span class="n">02</span><b>Every table</b><p>Standings, form and the playoff line for your league, updated as results come in.</p></button></li>
@@ -767,6 +730,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
       </div>
     </div>
     <div class="stage" id="stage">
+      <div class="glow"></div><div class="flr"></div>
       <div class="iph" id="iph">
         <div class="iph-fr"></div><i class="iph-bt ac"></i><i class="iph-bt v1"></i><i class="iph-bt v2"></i><i class="iph-bt pw"></i><i class="iph-bt cm"></i>
         <div class="iph-sc">
@@ -806,7 +770,7 @@ tbody tr{transition:background .3s}tbody tr:hover{background:rgba(244,241,234,.0
 
 <!-- CLUBS -->
 <section class="clubs" id="clubs">
-  <img class="wm" src="img/psl-shield-white.png" alt="">
+  <img class="wm" src="img/psl-shield.png" alt="">
   <div class="cl-in">
     <div><p class="k" data-fr="Clubs et partenaires">Clubs &amp; partners</p><h2 class="d"><span class="ln2"><span data-fr="Entrez">Bring your</span></span><span class="ln2"><span data-fr="dans le système.">club in.</span></span></h2></div>
     <div>
@@ -1091,8 +1055,7 @@ function renderApp(){const id=my||'opl',l=LI(id),rows=T[id].m;
  $('#apvs').textContent=`${rows[0].n} v ${rows[1].n}`;
  $('#aprec').innerHTML=rows.slice(2,5).map((r,i)=>`<div><time>FT</time><span>${r.n} ${[2,1,0][i]}–${[0,1,2][i]} ${rows[(i+3)%6].n}</span><img src="${S(id)}" alt=""></div>`).join('')}
 renderApp();
-(function(){const f=$('#iph');const w=document.createElement('div');w.className='phones2';f.parentNode.insertBefore(w,f);const b=f.cloneNode(true);b.removeAttribute('id');b.classList.add('back');b.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));b.querySelectorAll('.aps').forEach((x,j)=>x.classList.toggle('on',j===0));b.querySelectorAll('.a-tab span').forEach((x,j)=>x.classList.toggle('on',j===0));f.classList.add('front');w.append(b,f);})();
-let apI=0,apT;const apB=$$('#apft button'),scrs=$$('#iph .aps'),tabs=$$('#iph .a-tab span');
+let apI=0,apT;const apB=$$('#apft button'),scrs=$$('.aps'),tabs=$$('.a-tab span');
 function apGo(i){apI=i;apB.forEach((b,j)=>{b.classList.remove('on');if(j===i){void b.offsetWidth;b.classList.add('on')}});scrs.forEach((s,j)=>s.classList.toggle('on',j===i));tabs.forEach((t,j)=>t.classList.toggle('on',j===[0,1,3][i]));clearTimeout(apT);apT=setTimeout(()=>apGo((apI+1)%3),4500)}
 apB.forEach((b,i)=>b.onclick=()=>apGo(i));
 setInterval(()=>{const d=$('#cdm');let m=parseInt(d.textContent);m=m>0?m-1:59;d.firstChild.textContent=String(m).padStart(2,'0')},60000);
@@ -1103,9 +1066,10 @@ if(!reduce){
  gsap.from('.tb-t,.tb-card',{y:60,opacity:0,duration:1.1,stagger:.1,ease:'expo.out',scrollTrigger:{trigger:'#tbw',start:'top 85%'}});
  ScrollTrigger.create({trigger:'#tbw',start:'top 80%',once:true,onEnter:()=>{gsap.from('#tbb tr',{x:-30,opacity:0,duration:.7,stagger:.05,ease:'expo.out'});gsap.from('#tbrace i',{scaleX:0,duration:1.2,stagger:.08,ease:'expo.out'})}});
  gsap.from('.rv',{y:100,opacity:0,duration:1.2,stagger:.07,ease:'expo.out',scrollTrigger:{trigger:'#rltr',start:'top 88%'}});
- gsap.from(".ap2 .iph.back",{y:160,opacity:0,duration:1.4,ease:"expo.out",scrollTrigger:{trigger:"#app",start:"top 70%"}});gsap.from(".ap2 .iph.front",{y:220,opacity:0,duration:1.4,delay:.12,ease:"expo.out",scrollTrigger:{trigger:"#app",start:"top 70%"}});gsap.from(".ap-leaf",{rotate:-14,scale:.85,opacity:0,duration:1.6,ease:"expo.out",scrollTrigger:{trigger:"#app",start:"top 70%"}});gsap.to(".ap-leaf",{rotate:8,ease:"none",scrollTrigger:{trigger:"#app",start:"top bottom",end:"bottom top",scrub:true}});
+ gsap.fromTo('#iph',{rotateY:-34,rotateX:14,rotateZ:-6,y:120},{rotateY:-14,rotateX:4,rotateZ:-2,y:0,ease:'none',scrollTrigger:{trigger:'#app',start:'top bottom',end:'center center',scrub:1}});
+ if(fine){const st=$('#stage');st.addEventListener('mousemove',e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;gsap.to('#iph',{rotateY:-14+x*22,rotateX:4-y*14,duration:.8,ease:'power2.out'})});st.addEventListener('mouseleave',()=>gsap.to('#iph',{rotateY:-14,rotateX:4,duration:1.2,ease:'elastic.out(1,.5)'}))}
 }
-ScrollTrigger.create({trigger:'#app',start:'top 60%',once:true,onEnter:()=>apGo(2)});
+ScrollTrigger.create({trigger:'#app',start:'top 60%',once:true,onEnter:()=>apGo(0)});
 })();
 </script>
 </body>
